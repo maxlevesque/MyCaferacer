@@ -40,7 +40,7 @@ program main
     allocate( randomMoveArray(np) ,source=0.)
     allocate( randomRealArray(np) ,source=0.)
 
-    call startingConfigurationWithLowEnergy
+    call generateStartingConfigurationWithLowEnergy
 
     en0 = sysEn(x)
     nref= 0
@@ -139,7 +139,7 @@ program main
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-    subroutine startingConfigurationWithLowEnergy
+    subroutine generateStartingConfigurationWithLowEnergy
         implicit none
         integer :: i
         print*,"=> supercell initialization"
@@ -151,7 +151,7 @@ program main
             x=x*lx
         end do
         print*,"=> supercell initialization OK"
-    end subroutine startingConfigurationWithLowEnergy
+    end subroutine generateStartingConfigurationWithLowEnergy
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
